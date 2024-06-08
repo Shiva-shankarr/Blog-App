@@ -1,0 +1,28 @@
+.active{
+    color:orange !important;
+    font-size: 1.3rem;
+}
+.shiv{
+    height:100px;
+    background-color:rgb(89, 8, 102)
+}
+.root1{
+    min-height: 80hv;
+}
+
+.tharun{
+    background-color: rgb(16, 113, 137);
+}
+.tharun1{
+    background-color: rgb(132, 165, 169);
+}
+.raju{
+    background-color: rgb(78, 81, 83);
+}
+.rahul{
+    background-color: rgb(134, 149, 79);
+}
+
+.gopal{
+    background-color: rgb(232, 168, 89);
+}

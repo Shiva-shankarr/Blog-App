@@ -1,0 +1,82 @@
+
+####  authors Api reqs..
+
+### Author register....
+POST http://localhost:4000/author-api/authors 
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Hussain",
+    "email":"hussain@gmail.com",
+    "password":"Hussain"
+}
+
+
+
+### Author login req
+POST http://localhost:4000/author-api/login 
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Hussain",
+    "password":"Hussain"
+}
+
+
+### add new article by author
+post http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+   "articleId":"{{$timestamp}}",
+   "title":"Machine learning",
+   "category":"Technology",
+   "content":"Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.",
+   "dateOfCreation":"{{$datetime iso8601}}",
+   "dateOfModification":"{{$datetime iso8601}}",
+   "username":"shiva",
+   "comments": [ ],
+   "status":true
+}
+
+
+### modify article by author
+PUT http://localhost:4000/author-api/article 
+Content-Type: application/json
+
+{
+    "articleId":"1708965546",
+   "title":"Machine learning",
+   "category":"Technology",
+   "content":"Machine learning & AI  is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.  Written by shiva....",
+   "dateOfCreation":"2024-02-26T16:39:06.546Z",
+   "dateOfModification":"{{$datetime iso8601}}",
+   "username":"shiva",
+   "comments": [ ],
+   "status":true
+}
+
+
+### soft delete an article by id
+PUT http://localhost:4000/author-api/article/1708965546
+Content-Type: application/json
+
+{
+    "articleId":"1708965546",
+   "title":"Machine learning",
+   "category":"Technology",
+   "content":"Machine learning & AI  is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.  Written by shiva....",
+   "dateOfCreation":"2024-02-26T16:39:06.546Z",
+   "dateOfModification":"{{$datetime iso8601}}",
+   "username":"shiva",
+   "comments": [ ],
+   "status":true
+}
+
+
+
+### read the articles of author by username...
+GET http://localhost:4000/author-api/article/shiva 
+

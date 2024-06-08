@@ -1,0 +1,39 @@
+### User Api reqs..
+### user registration req...
+POST http://localhost:4000/user-api/users 
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"shiva",
+    "email":"shiva@gmail.com",
+    "password":"shiva"
+}
+
+#### user login req.. 
+POST http://localhost:4000/user-api/login  
+Content-Type:application/json
+
+{
+    "userType":"user",
+    "username":"shiva",
+    "password":"shiva"
+}
+
+
+### get articles..
+GET http://localhost:4000/user-api/articles
+
+
+### post comments.. 
+POST http://localhost:4000/user-api/comment/1708965546
+Content-Type: application/json 
+
+{
+    "username":"shiva",
+    "comment":"Good blog....keep on exploree broo....."
+}
+
+
+
+
